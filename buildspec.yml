@@ -1,3 +1,4 @@
+version: 0.2
 pre_build:
   commands:
     - echo Logging in to Amazon ECR....
@@ -5,8 +6,6 @@ pre_build:
     - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 258975980349.dkr.ecr.ap-south-1.amazonaws.com
     - # Replace with this to your repository URI
     - REPOSITORY_URI=258975980349.dkr.ecr.ap-south-1.amazonaws.com/spring-demo-ecr
-version: 0.2
-
 phases:
   pre_build:
     commands:
